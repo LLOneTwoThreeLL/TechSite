@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="code.css">
+	<title>Page de vérification de code</title>
+	<script>
+		function validateForm() {
+			var code = document.getElementById("code").value;
+			if (code == "112233") {
+				return true;
+			} else {
+				alert("Le code est incorrect!");
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+
+	<nav>
+		<a href="../../index.html">BACK</a>
+	</nav>
+
+
+	<div class="verif">
+	<h2>Veuillez entrer le code:</h2>
+	<form action="chaine.html" onsubmit="return validateForm()">
+		<input type="text" id="code" name="code">
+		<button type="submit">Valider</button>
+	</form>
+	</div>
+</body>
+</html>
